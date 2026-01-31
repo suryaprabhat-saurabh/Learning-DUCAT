@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #0f0e0e;
+    color: whitesmoke;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    top: 30px;
+    left: 30px;
+    position: absolute;
+}
+
+header {
+    border-bottom: gray 1px solid;
+    padding-bottom: 30px;
+}
+
+.navbar {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+.navbar ul li {
+    display: inline;
+    margin: 15px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.navbar ul li a:hover {
+    color: gray;
+}
+
+.button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn1 {
+    background-color: blue;
+}
+.btn2 {
+    border: 2px solid whitesmoke;
+}
+
+.content {
+    width: 450px;
+}
+
+.headline {
+    position: relative;
+    top: 60px;
+    left: 30px;
+    font-size: 30px;
+    font-weight: 500;
+    display: inline;
+}
+
+.blue {
+    display: inline;
+    color: blue;
+}
+
+.paragraph {
+    position: relative;
+    top: 35px;
+    left: 30px;
+    font-size: 20px;
+    display: inline;
+}
+
+#email {
+    width: 95%;
+    height: 25px;
+    padding: 10px 20px;
+    position: relative;
+    top: 60px;
+    left: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(39, 38, 38);
+    color: thistle;
+    display: inline;
+}
+
+.btn3 {
+    width: 104%;
+    height: 45px;
+    padding: 10px 20px;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+.policy {
+    font-size: small;
+    position: relative;
+    top: 55px;
+    left: 30px;
+}
+.policy a {
+    text-decoration: none;
+    color: lightseagreen;
+    left: 30px;
+}
+.policy a:hover {
+    color: blue;
+}
+
+#bird {
+    position: absolute;
+    top: 120px;
+    right: 200px;
+    bottom: 0px;
+    width: 400px;
+    height: 400px;
+}
