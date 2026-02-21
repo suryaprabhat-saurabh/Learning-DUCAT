@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="todo-box">
+        <div class="heading">
+            <h1>To-do List</h1>
+        </div>
+      <div class="input-btn">
+        <input autofocus id="inputField" for="creatingTodo" type="text" required placeholder="Enter your To-Do here"/>
+        <br/>
+        <button onclick="createTodo()" id="creatingTodo" class="btn">
+          Create To-do
+        </button>
+        <br/>
+        <button onclick="deleteAllTodo()" id="deletingTodo" class="btn">
+          Delete All
+        </button>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
