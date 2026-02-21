@@ -12,32 +12,38 @@
     --navbg: conic-gradient(red,blue,green)
 }
 
+body{
+    background: rgb(97, 4, 139);
+}
+
 h1 {
     font-family: "lora", serif;
-    color: var(--primary);
-    font-size: 5rem;
+    color: var(--secondary);
+    font-size: 4rem;
     margin-bottom: 20px;
+    display: block;
+}
+
+.navbar-box {
+    height: 6vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
 }
 
 .navbar {
-    /* Required */
-
     height: 6vh;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 10px;
     margin: 0 auto;
-    z-index: 100;
+    gap: 20px;
     position: relative;
     opacity: 1;
-
-    /* Colors & Bg & Border*/
     color: white;
     background: black;
-    /* Animation */
-
     animation: fadeinDown 1s ease;
 }
 
@@ -47,10 +53,18 @@ h1 {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: aqua;
+    background: conic-gradient(
+        red,
+        blue,
+        green
+    );
     border-radius: inherit;
     z-index: -2;
     padding: 5px;
+}
+
+.navbar::after{
+    filter: blur(10px);
 }
 
 
@@ -87,4 +101,172 @@ h1 {
 
 .logo{
     filter: invert(1);
+}
+
+.about-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-info{
+    height: 50%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    /* color: white; */
+    background: black;
+}
+
+.about-info::before,
+.about-info::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.about-info::after{
+    filter: blur(10px);
+}
+
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.about-image{
+    height: 200px;
+    aspect-ratio: 1/1;
+}
+.image{
+    height: 100%;
+}
+
+.skills-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-box{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    background: black;
+}
+
+.skills-box::before,
+.skills-box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.services-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-box{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    background: black;
+}
+
+.services-box::before,
+.services-box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.contact-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    background: black;
+}
+
+.contact-box::before,
+.contact-box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
 }
