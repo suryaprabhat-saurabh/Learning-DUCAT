@@ -14,16 +14,19 @@ body {
   }
   
 .todo-box {
+    margin-top: 20px;
     background: linear-gradient(135deg,rgb(123, 72, 241),rgba(101, 0, 148, 0.993));
     padding: 20px;
+    gap: calc(5px + 2vh);
     display: flex;
     justify-content: space-between;
-    flex-direction :column;
-    /* text-align: center; */
+    flex-direction : column;
+    text-align: center;
     align-items: center;
-    height: 400px;
-    width: 70vw
-    
+    height: fit-content;
+    width: 20vw;
+    border: 2px solid white;
+    border-radius: 10px;   
 }
 
 .heading {
@@ -38,31 +41,49 @@ body {
 }
 
 ul{
-  display: block;
+  display: inline;
   justify-content: center;
   align-items: center;
 }
 
 li {
-    width: fit-content;
+    width: 99%;
     height: 1rem;
-    background-color: aqua;
+    /* background-color: white; */
   }
 
 ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* background: red; */
+    background: rgba(255, 249, 249, 0.274);
 
 }
 
 .line{
     text-decoration: line-through;
     color: red;
+    z-index: 100;
 }
 
 .btn {
   background: transparent;
   border: none;
 }
+
+.all-todo{
+  height: inherit;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#deleteBtn {
+  border: none;
+  background-color: aquamarine;
+  padding: 2px;
+  margin: 10px;
+}
+
+

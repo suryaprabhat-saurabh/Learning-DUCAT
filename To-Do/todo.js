@@ -1,44 +1,57 @@
-// let todo = [];
-// let createBtn = document.querySelector("#creatingTodo");
-// let deleteAll = document.querySelector("#deletingTodo");
+let todo = [];
+let createBtn = document.querySelector("#creatingTodo");
+let deleteAll = document.querySelector("#deletingTodo");
 
 // let body = document.querySelector("body");
+let allTodo = document.querySelector(".all-todo")
 
-// let ul = document.createElement("ul");
+let ul = document.createElement("ul");
 
-// function createTodo() {
-//   todo.push(todoInput.value);
+function createTodo() {
+
+  if (todoInput.value === "") {
+    alert("Please enter a todo item.");
+    return;
+  }
+  else {
+
+    
+    todo.push(todoInput.value);
+  console.log(todoInput.value);
   
-//     let li = document.createElement("li");
-//     let deleteBtn = document.createElement("button");
-//     deleteBtn.innerText = "Delete";
-//     deleteBtn.style.margin = "10px";
-//     deleteBtn.style.background = "red";
+    let li = document.createElement("li");
+    let deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute("id", "deleteBtn");
+    deleteBtn.innerText = "Delete";
     
-//     li.innerText = todo[0];
-//     ul.append(li, deleteBtn);
+    li.innerText = todoInput.value;
+    ul.append(li, deleteBtn);
     
-//     li.style.cursor = "pointer";
+    li.style.cursor = "pointer";
+    
+    
+    deleteBtn.addEventListener("click", function () {
+      li.remove();
+      deleteBtn.remove();
+  });
+  // Event
+
+  li.addEventListener("click", function () {
+    li.classList.toggle("line");
+  });
   
-    
-//     deleteBtn.addEventListener("click", function () {
-//       li.remove();
-//       deleteBtn.remove();
-//   });
+}
+  // todo = [];
+  todoInput.value = "";
+}
 
-//   // Event
 
-//   li.addEventListener("click", function () {
-//     li.classList.toggle("line");
-//   });
-//   // todo = [];
-//   todoInput.value = "";
-// }
 
-// // Append to Body
-// function deleteAllTodo() {
-//   ul.remove();
-// }
+// Append to Body
+function deleteAllTodo() {
+  ul.innerHTML= "";
+  todo = [];
+}
 
-// body.append(ul);
-// let todoInput = document.querySelector("#inputField");
+allTodo.append(ul);
+let todoInput = document.querySelector("#inputField");
