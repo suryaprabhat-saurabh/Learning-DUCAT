@@ -13,7 +13,7 @@
 }
 
 body{
-    background: rgb(97, 4, 139);
+    background: rgb(7, 13, 75);
 }
 
 h1 {
@@ -24,11 +24,23 @@ h1 {
     display: block;
 }
 
+.header{
+    height: 10%;
+    width: inherit;
+    padding: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nav-section */
+
 .navbar-box {
     height: 6vh;
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
+    animation: fadeinDown 1s ease;
 }
 
 .navbar {
@@ -42,9 +54,8 @@ h1 {
     gap: 20px;
     position: relative;
     opacity: 1;
-    color: white;
-    background: black;
-    animation: fadeinDown 1s ease;
+    color: var(--secondary);
+    background: rgba(0, 0, 0, 0.938);
 }
 
 .navbar::before,
@@ -94,14 +105,15 @@ h1 {
 }
 
 .nav-links a:hover {
-    color: var(--primary);
+    color: var(--links);
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .logo{
     filter: invert(1);
 }
+
+/* About-section */
 
 .about-container{
     height: 100vh;
@@ -111,20 +123,20 @@ h1 {
     align-items: center;
 }
 
-.about-info{
-    height: 50%;
-    width: 70%;
+.about-box{
+    height: 50vh;
+    width: 70vw;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     opacity: 1;
-    /* color: white; */
     background: black;
+    border-radius: 20px;
 }
 
-.about-info::before,
-.about-info::after{
+.about-box::before,
+.about-box::after{
     content: "";
     position: absolute;
     height: 100%;
@@ -141,8 +153,8 @@ h1 {
     padding: 5px;
 }
 
-.about-info::after{
-    filter: blur(10px);
+.about-box::after{
+    filter: blur(20px);
 }
 
 .about-content{
@@ -150,6 +162,8 @@ h1 {
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 5%;
+    gap: 5%;
 }
 
 .about-image{
@@ -158,17 +172,20 @@ h1 {
 }
 .image{
     height: 100%;
+    border-radius: 10px;
 }
 
+/* Skills-section */
+
 .skills-container{
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.skills-box{
+.box{
     height: 90%;
     width: 90%;
     display: flex;
@@ -177,10 +194,11 @@ h1 {
     position: relative;
     opacity: 1;
     background: black;
+    border-radius: 20px;
 }
 
-.skills-box::before,
-.skills-box::after{
+.box::before,
+.box::after{
     content: "";
     position: absolute;
     height: 100%;
@@ -197,15 +215,39 @@ h1 {
     padding: 5px;
 }
 
+.box::after{
+    filter: blur(11px);
+}
+
+.skills-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+}
+
+/* Services-section */
+
 .services-container{
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.services-box{
+.services-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+}
+
+/* .services-box{
     height: 90%;
     width: 90%;
     display: flex;
@@ -232,17 +274,29 @@ h1 {
     border-radius: inherit;
     z-index: -2;
     padding: 5px;
-}
+} */
 
 .contact-container{
-    height: 90vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact-box{
+.contact-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+}
+
+/* .contact-box{
     height: 90%;
     width: 90%;
     display: flex;
@@ -269,4 +323,31 @@ h1 {
     border-radius: inherit;
     z-index: -2;
     padding: 5px;
+} */
+
+/* Cards section */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.card-content{
+    height: 110px;
+    aspect-ratio: 1/1;
+    background: color-mix(in srgb-linear, red 33%, purple 33%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    /* border-radius: 0px 0px 10px 10px ; */
+}
+
+p{
+    color: var(--secondary);
+    font-size: 1.2rem;
 }
