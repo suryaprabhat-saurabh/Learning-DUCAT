@@ -247,37 +247,10 @@ h1 {
     gap: 5%;
 }
 
-/* .services-box{
-    height: 90%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    opacity: 1;
-    background: black;
-}
-
-.services-box::before,
-.services-box::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: conic-gradient(
-        #00c3ff,
-        #4d0199,
-        #6300c6,
-        #009dcd,
-        #00c3ff
-    );
-    border-radius: inherit;
-    z-index: -2;
-    padding: 5px;
-} */
+/* Contact-section */
 
 .contact-container{
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -293,11 +266,12 @@ h1 {
     text-align: center;
     color: white;
     padding: 5%;
+    margin: 2%;
     gap: 5%;
 }
 
-/* .contact-box{
-    height: 90%;
+.contact-box{
+    height: 70%;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -305,6 +279,7 @@ h1 {
     position: relative;
     opacity: 1;
     background: black;
+    border-radius: 20px;
 }
 
 .contact-box::before,
@@ -323,9 +298,27 @@ h1 {
     border-radius: inherit;
     z-index: -2;
     padding: 5px;
-} */
+}
+
+.contact-box::after{
+    filter: blur(11px);
+}
+
+.contact-icons{
+    height: 50px;
+    aspect-ratio: 1/1;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.contact-icons:hover{
+    transform: translatey(-5px);
+    transition: all 0.5s ease-in-out;
+    filter: invert(1) drop-shadow(0 0 10px white);
+}
 
 /* Cards section */
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -337,17 +330,68 @@ h1 {
 .card-content{
     height: 110px;
     aspect-ratio: 1/1;
-    background: color-mix(in srgb-linear, red 33%, purple 33%);
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 2%;
     margin: 2%;
-    /* border-radius: 0px 0px 10px 10px ; */
+    transition: all 0.5s ease-in-out;
+    border-radius: 50% ;
 }
 
+.card-content:hover{
+    background: conic-gradient(
+        from 30deg at 30% 50%,
+        #A100FFFF 0%,
+        #000000 25%,
+        #119CFDFF 40%
+    );
+    color: whitesmoke;
+    transform: translatey(-5px);
+    /* animation: card-moving 1s ease-in-out infinite alternate; */
+    filter: drop-shadow(0 0 10px white);
+}
+
+@keyframes card-moving {
+    from {
+    transform: translatey(0px);
+    }
+    to {
+    transform: translatey(-20px);
+    }
+}
 p{
     color: var(--secondary);
     font-size: 1.2rem;
+}
+
+.cards a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+
+/* Media Query */
+
+@media screen and (min-width: 730px ) and (max-width: 1080px) {
+    .about-box{
+        width: 90vw;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
 }
